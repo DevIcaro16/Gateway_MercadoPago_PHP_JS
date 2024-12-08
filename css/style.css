@@ -1,0 +1,82 @@
+
+html, body{
+    height: 100%; /* Força o body e o html a ocuparem 100% da altura */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    display: flex; /* Torna o body um contêiner flexível */
+    flex-direction: column; /* Organiza elementos em coluna */
+    box-sizing: border-box;    
+}
+
+.main-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_balance{
+    height: auto;
+    width: 700px;
+    margin: 0 auto;
+    background-color: #140054;
+    color: #fff;
+    font-family: arial;
+    padding: 50px;
+}
+
+.div_balance h2{
+    display: flex;
+    justify-content: center;
+}
+
+.div_balance p{
+    display: grid;
+    margin: 0px 30px;
+}
+.div_balance p a{
+    text-decoration: none;
+    background-color: #01d2e5;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.div_balance input{
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid #01d2e5;
+    font-size: 20px;
+    padding-left: 10px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.methods-container{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    height: 350px;
+}
+
+.method-container-title h3{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+}
+
+.option-container{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #01d2e5;
+    margin: 25px 0px 0px 0px;
+}
+
+.card-page{
+    width: 500px;
+    margin: 0 auto;
+}
