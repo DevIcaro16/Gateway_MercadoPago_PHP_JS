@@ -27,7 +27,7 @@ class DB
         $this->host = "127.0.0.1";
         $this->port = "3306";
         $this->user = "root";
-        $this->password = "Irpgamerbr_17";
+        $this->password = "-------------";
         $this->database = "pagamentos";
 
         // Class PDO

@@ -26,8 +26,8 @@ $dados_user = $user->get();
 <body>
     <div class="main-container">
         <div class="div_balance">
-            <h2>Username: <?= $dados_user->username; ?></h2>
-            <h2>Saldo: R$<?= $dados_user->balance; ?></h2>
+            <h2>Usuário: <?= $dados_user->username; ?></h2>
+            <h2 id="h2-saldo">Saldo: R$<?= $dados_user->balance; ?></h2>
 
             <br>
 

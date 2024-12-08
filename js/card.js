@@ -1,7 +1,7 @@
 console.log("TESTE");
 
 // Chave Pública da conta de desenvolvedor Mercado Pago
-const mp = new MercadoPago('TEST-5aa4bbca-96f1-427f-8fb1-d866ab2bb823');
+const mp = new MercadoPago('-------------------------------------');
 const bricksBuilder = mp.bricks();
 
 

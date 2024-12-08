@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIX - SDK</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+</body>
+
+</html>
+
 <?php
 
 // var_dump($_GET['vl']);
@@ -109,11 +125,21 @@ if ($payCreate) {
         //Variável com o código HTML que envolverá os parâmetros de pagamento
 
         $html = "
-                <h3>{$transaction_amount} #{$external_reference}</h3>
-                <img src='data:image/png;base64, {$img_qr_code}' alt='' width='200'> <br/>
-                <h3>{$config['url_notification_sdk']}</h3>
-                <textarea>{$copia_e_cola}</textarea> <br/>
-                <a href='{$link_externo}' target='_blank'>Link do Pagamento</a>
+                <div class='main-container'>
+                    <div class='content-container'>
+                        <h2>SDK</h2> 
+                        <hr>
+                        <div class='h3-container'>
+                            <h3 id='h3-valor'>Valor: R$ {$transaction_amount}</h3>
+                            <h3 id='h3-id'>ID: #{$external_reference}</h3>
+                        </div>
+                        <label>QR Code</label>
+                        <img src='data:image/png;base64, {$img_qr_code}' alt='' width='200'> <br/>
+                        <label>Copia e Cola</label>
+                        <textarea>{$copia_e_cola}</textarea> <br/>
+                        <a href='{$link_externo}' target='_blank'>Link do Pagamento</a>
+                        </div>
+                </div>
             ";
 
         echo $html;

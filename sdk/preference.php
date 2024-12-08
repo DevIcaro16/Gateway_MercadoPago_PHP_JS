@@ -59,7 +59,7 @@ if (!isset($body->token)) {
 
             //Verifca se o valor é um valor válido (Positivo)
 
-            if ($_GET['vl'] < 1 || $_GET['vl'] > 100) {
+            if ($_GET['vl'] < 0.01 || $_GET['vl'] > 100) {
                 die('Valor Deve Ser Positivo e menor que R$ 100.00!');
             }
         }
@@ -128,14 +128,20 @@ if (!isset($body->token)) {
 
                 //Variável com o código HTML que envolverá os parâmetros de pagamento
 
-                $html = "
-                        <h3>{$amount} #{$external_reference}</h3>
-                        <a href='{$link_externo}' target='_blank'>Link Externo</a>
-                    ";
+                // $html = "
+                //         <h3>{$amount} #{$external_reference}</h3>
+                //         <a href='{$link_externo}' target='_blank'>Link Externo</a>
+                //     ";
 
-                echo $html;
+                // echo $html;
 
                 // echo $copia_e_cola;
+
+                //Redirecionamento com Header
+
+                header("Location: {$link_externo}");
+                exit;
+
             }
 
         }
