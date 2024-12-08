@@ -44,7 +44,7 @@ if (isset($body->data->id)) {
         if ($payment_data) {
 
             if ($payment->status == "approved") {
-                // add balance user
+                // add balance user 
                 $user = new User($payment_data->user_id);
                 $addBalance = $user->addBalance((float) $payment_data->valor);
 
